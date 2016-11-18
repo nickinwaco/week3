@@ -1,17 +1,13 @@
 /*
 =======================================================
-
 ** Week 6 - Project 1 **
 *** THE OBJECT OF MY AFFECTION: OBJECTS ***
-
 Below are a number of problems for you to solve
 using JS. The JS code can be written below each
 problem and the result can be displayed in the HTML page.
-
 For any methods that we didn't cover, please refer to the Object Documentation.
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 Discovering new things is fun and a great way to learn!!
-
 BASIC TRACK: 1-13
 ADVANCED TRACK: 14-20
 =======================================================
@@ -124,19 +120,30 @@ document.getElementById("q8").innerHTML = "<p> Ada's Allergies: " + invitees.chi
 // and has selected ________ as her dessert."
 
 
-
+console.log(invitees.adults[2].dinnerChoice[0]);
+document.getElementById("q8").innerHTML = "<p> Lauren's appetizer is " + invitees.adults[2].dinnerChoice[0] + ".  She will be eating " + invitees.adults[2].dinnerChoice[1] + " for dinner and has selected " + invitees.adults[2].dinnerChoice[2] +" as her dessert.</p>";
 
 
 
 // 10. Create an empty object called "jsWorkshop" using Constructor Notation.
 
+var jsworkshop = new Object();
+
 // 11. To your "jsWorkshop" object, assign a key of "classmates" with the value being an array of five your classmates.
+
+jsworkshop.classmates = ["nick", "vito", "will", "kristen", "john"];
+console.log(jsworkshop.classmates);
 
 // 12. Get the length of the fourth classmate's name.
 
+console.log(jsworkshop.classmates[3].length);
+document.getElementById("q12").innerHTML += "<p> 4th Classmate's name " + jsworkshop.classmates[3] + "</p>";
+document.getElementById("q12").innerHTML += "<p> and the length is:  " + jsworkshop.classmates[3].length + "</p>";
+
 // 13. Clear the classmates value.
 
-
+jsworkshop.classmates[3] = "";
+document.getElementById("q13").innerHTML += "<p> 4th Classmate's name: (blank) " + jsworkshop.classmates[3] + "</p>";
 
 
 
